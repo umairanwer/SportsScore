@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+
+}
+
+:root{
+    --main-bg: #fffaf0;
+    --accent-1: rgb(219, 226, 239);
+    --accent-2: rgb(63, 114, 175);
+    --accent-3: rgb(17, 45, 78);
+    
+    --footer-height: 4rem;
+    font-size: 10px;
+}
+
+body{
+    position: relative;
+    background-color: var(--main-bg);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+.flex{
+    display: flex;
+}
+
+header{
+    flex-wrap: wrap;
+    padding: 1em;
+    margin-bottom: 5em;
+}
+.company-logo{
+    width: 200px;
+    align-self: center;
+}
+
+header h1{
+    width: 100%;
+    text-align: center;
+    margin-top: 0.4em;
+    font-size: 3.2em;
+}
+
+main{
+    padding: 1em;
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: var(--footer-height);
+}
+main h2{
+    font-size: 2.4em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--footer-height);            /* Footer height */
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+  }
+.footer-copyrights{
+    font-size: 1.5rem;
+}

@@ -1,0 +1,392 @@
+:root{
+    --label-bg: rgba(10, 10, 10, 0.7);
+    --label-text: #ffffff;
+    --border-rad: 0.75rem;
+    color: white;
+}
+
+.main-hdg{
+    background-color: rgba(10, 10, 10, 0.8);
+    
+    color: inherit;
+    margin: inherit;
+    font-size: inherit;
+    border: inherit;
+    width: min(60rem, 75vw);
+    padding: 0.4rem 0;
+    text-align: center;
+    font-family: inherit;
+}
+.score-container{
+    width: min(960px, 90vw);
+    justify-content: center;
+}
+.team-score-container{
+    margin: 0 5rem;
+    width: fit-content;
+    padding: 0 2rem;
+}
+
+.score-display{
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-rad);
+    background-color: var(--label-bg);
+    color: var(--label-text);
+    margin: 0 auto;
+    width: min-content;
+    
+}
+
+.score-display.double-digit-score{
+    width: 15rem;
+}
+
+.score-dash{
+    font-size: 8rem;
+    align-self: center;
+}
+.dash-container h2{
+    margin: 0;
+}
+.text-bordered{
+    text-shadow: -2px 2px 5px #000,
+                          2px 2px 5px #000,
+                         2px -2px 5px #000,
+                        -2px -2px 5px #000;
+}
+.team-name{
+    background-color: transparent;
+    border: none;
+    resize: none;
+    color: var(--label-text);
+    font-family: inherit;
+    text-align: center;
+    overflow: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.score-display p{
+    font-size: 8rem;
+    cursor: pointer;
+    
+}
+
+.score-change-btn{
+    visibility: hidden;
+    font-size: 3rem;
+    padding: 0rem;
+    margin: 0.7rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+
+}
+
+.score-display:hover .score-change-btn{
+    visibility: visible;
+}
+
+.time-container{
+    margin: 0 auto;
+    width: max-content;
+    border-radius: var(--border-rad);
+    background-color: var(--label-bg);
+    align-self: start;
+    padding: 2rem 1rem 0 1rem;
+}
+.time-container h2{
+    margin-bottom: 0.5rem;
+    
+}
+
+.time-and-player-container{
+    margin-top: 1rem;
+    justify-content: space-between;
+    width: min(960px, 90vw);
+}
+
+.half-display{
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    cursor: pointer;
+    border: 2px solid white;
+    width: fit-content;
+    margin: 0 auto;
+}
+.half-display .score-change-btn{
+    font-size: 2rem;
+}
+.half-display:hover .score-change-btn{
+    visibility: visible;
+}
+.timer-container{
+    position: relative;
+}
+.timer-container:hover .time-controller{
+    visibility: visible;
+    bottom: -1rem;
+    transition: bottom 0.1s linear;
+}
+.time-controller{
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    visibility: hidden;
+
+    transition: all 0.25s linear; 
+}
+.time-controller button{
+    margin: 0 0.2rem;
+    width: 2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.time-controller button:hover{
+    cursor: pointer;
+    background-color: white;
+}
+
+.timer-element{
+    margin-top: 1.5rem;
+    font-size: 6.5rem;
+    cursor: pointer;
+}
+.timer-element.inactive{
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.player-item{
+    display: flex;
+    align-items: center;
+    width: 25rem;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    padding: 0 0;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+}
+.icon-container{
+    height: inherit;
+}
+.player-item .sub-icon{
+    height: 2rem;
+    opacity: 0.5;
+    padding: 0 0.3rem;
+    align-self: center;
+}
+.player-item .sub-icon:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.player-name{
+    font-size: 2rem;
+    margin: 0.5rem 1rem;
+    width: 75%;
+    word-wrap: break-word;
+    align-self: flex-start;
+    background-color: inherit;
+    border: none;
+    color: var(--label-text);
+}
+
+.team-players-container{
+    border-radius: var(--border-rad);
+    background-color: var(--label-bg);
+    color: white;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.new-player-input{
+    margin-top: 1rem;
+    justify-self: center;
+    width: 100%;
+    align-self: baseline;
+    margin-bottom: 2rem;
+    background-color: inherit;
+    border: none;
+    color: var(--label-text);
+    text-align: center;
+    font-style: inherit;
+}
+.playing-label{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.delete-btn{
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    align-self: center;
+    color: white;
+
+}
+
+.football-bg{
+    background-image: url('../images/football-bg-1.jpg');
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+.badminton-bg{
+    background-image: url('../images/badminton-bg-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    background-color: #000;
+}
+.volleyball-bg{
+    background-image: url('../images/volleyball-bg-1.jpg');
+
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 150%;
+    background-color: #000;
+}
+
+
+/*MATCH FIXTURES*/
+.fixtures-outer-container{
+    position: relative;
+    margin: 0 auto;
+    width: 60rem;
+    margin-top: 2rem;
+    background-color: rgba(10, 10, 10, 0.7);
+    border-radius: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.fixture-element{
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    padding: 1.5rem;
+    border-bottom: 2px solid white;
+    background-color: rgba(10, 10, 10, 1);
+}
+.fixture-element input{
+    background-color: rgba(10, 10, 10, 0.7);
+    font-size: 1.8rem;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border: none;
+    font-style: inherit;
+}
+.fixture-elm-date-container{
+    margin-right: 2rem;
+}
+.fixture-elm-date{
+    width: 4rem;
+    padding: 0 0.5rem;
+    text-align: center;
+    appearance: none;
+}
+.fixture-elm-team-score{
+    width: 4rem;
+    padding: 0 0.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fixture-element select{
+    background-color: black;
+    font-size: 1.8rem;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+.fixture-elm-vs{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0 2rem;
+}
+
+.fixture-elm-date-container + .fixture-elm-team-container .fixture-elm-team-name{
+    text-align: right;
+}
+
+
+.fixture-elm-team-name {
+    border: 1px solid rgb(42, 42, 42);
+    width: 100%;
+}
+.fixture-elm-team-container {
+    border: 1px solid rgb(75, 75, 75);
+    border-radius: 0.5rem;
+}
+.del-fixture-btn{
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 100%;
+
+    top: -0.75rem;
+    right: -0.75rem;
+
+    cursor: pointer;
+    visibility: hidden;
+}
+.fixture-element:hover .del-fixture-btn{
+    visibility: visible;
+}
+
+.add-fixture-btn{
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 100%;
+    background-color: rgba(49, 49, 49, 0.5);
+    color: rgb(0, 137, 0);
+    bottom: -2rem;
+    left: 50%;
+    border: none;
+
+    visibility: hidden;
+}
+.fixtures-outer-container:hover .add-fixture-btn{
+    visibility: visible;
+    cursor: pointer;
+}
+.add-fixture-btn:hover{
+    background-color: rgba(49, 49, 49, 1);
+}
+.template{
+    display: none;
+}
+
+@media only screen and (max-width: 760px) {
+    .time-and-player-container{
+        flex-direction: column;
+    }
+
+    .time-container{
+        order: 1;
+    }
+    .team-players-container:first-of-type {
+        order: 2;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .team-players-container:last-of-type{
+        order: 3;
+    }
+    .player-item{
+        width:100%;
+        padding-right: 10px;
+    }
+}

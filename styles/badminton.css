@@ -1,0 +1,102 @@
+.set-won-btn{
+    position: absolute;
+    align-self: center;
+    display: block;
+    
+    left: 50%;
+    bottom: -0.5rem;
+    width: max-content;
+    padding: 0.3rem 0.5rem;
+    margin-top: 0.3rem;
+
+    background-color: #006A4E80;
+    border-radius: 0.5rem;
+    color: inherit;
+    font-weight: bold;
+    border: 1px solid black;
+
+    cursor: pointer;
+}
+.team-score-container{
+    position: relative;
+}
+
+.set-won-btn:hover{
+    background-color: #006A4E;
+
+}
+.set-container .score-value{
+    font-size: 6rem;
+}
+.set-container .score-change-btn{
+    font-size: 1.5rem;
+}
+
+.time-and-player-container.set-game{
+    justify-content: center;
+    width: min(750px, 90vw);
+    margin: 1rem auto;
+}
+
+.time-container.set-game{
+    margin: 0 4rem;
+}
+
+.sets-won-hdg{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.set-game .total-sets-played{
+    padding: 0 1.5rem;
+}
+
+.prev-sets-outer-container{
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+.prev-set-container{
+    position: relative;
+    width: 11rem;
+    border: 2px solid black;
+    padding: 0rem 0.5rem;
+    border-radius: 1rem;
+    justify-content: space-around;
+    font-size: 2.8rem;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.7);
+    color: black;
+    margin: 0rem 1rem;
+}
+.loser-score{
+    color: #5c5c5c;
+}
+.del-prev-set-btn{
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 100%;
+
+    top: -0.75rem;
+    right: -0.75rem;
+
+    cursor: pointer;
+}
+.hidden-btn{
+    visibility: hidden;
+}
+.template{
+    display: none;
+}
+@media only screen and (max-width: 760px) {
+    .time-and-player-container.set-game{
+        flex-direction: row;
+    }
+
+    .set-game .time-container{
+        order: unset;
+    }
+}

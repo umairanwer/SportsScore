@@ -1,0 +1,32 @@
+
+
+.sport-select-container{
+    width: min(960px, 90vw);
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sport-select-container a{
+    color: inherit;
+    text-decoration: inherit;
+    margin: 2em;
+}
+.sport-tab{
+    border: 2px solid black;
+    border-radius: 0.5em;
+    width: 20em;
+    text-align: center;
+    padding: 1.5em;
+    transition: transform 0.1s;
+}
+.sport-tab img{
+    width: 14em;
+}
+.sport-tab h3{
+    font-size: 2em;
+    margin-top: 1em;
+}
+.sport-tab:hover{
+    transform: scale(1.1);
+    background-color: #FFD580;
+    cursor: pointer;
+}

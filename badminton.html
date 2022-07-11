@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/scoring.css">
+    <link rel="stylesheet" href="styles/badminton.css">
+</head>
+<body class="badminton-bg">
+    <header class="flex">
+        <img class="company-logo" src="images/company-logo.png" alt="Company Logo">
+        <h1><input class="main-hdg text-bordered" value="Badminton Tournament (edit)"></input></h1>
+    </header>
+    <main>
+        <section class="score-container flex">
+            <div class="team-score-container">
+                <input class="team-name text-bordered" value="TEAM 1 (edit)" maxlength="20"></input>
+                <div class="score-display double-digit-score flex">
+                    <button id="team1-dec" class="score-change-btn">&#8210;
+                    </button>
+                    <p class="score-value" id="t1-score">0</p>
+                    <button id="team1-inc" class="score-change-btn">+</button>
+                </div>
+                <button class="set-won-btn hidden-btn" id="t1-set-won">WON SET</button>
+            </div>
+            <div class="dash-container">
+                <h2 class="text-bordered">vs</h2>
+                <p class="score-dash text-bordered">&#8211;</p>
+            </div>
+            <div class="team-score-container">
+                <input class="team-name text-bordered"  value="TEAM 2 (edit)" maxlength="20"></input>
+                <div class="score-display double-digit-score flex">
+                    <button id="team2-dec" class="score-change-btn">&#8210;
+                    </button>
+                    <p class="score-value" id="t2-score">0</p>
+                    <button id="team2-inc" class="score-change-btn">+</button>
+                </div>
+                <button class="set-won-btn hidden-btn"  id="t2-set-won">WON SET</button>
+            </div>
+        </section>
+        <div class="time-and-player-container set-game flex">
+            <div class="set-container">
+                <p class="sets-won-hdg text-bordered">SETS WON</p>
+                <div class="score-display sets-won flex">
+                    <button id="team1-set-dec" class="score-change-btn">&#8210;
+                    </button>
+                    <p class="score-value" id="t1-sets">0</p>
+                    <button id="team1-set-inc" class="score-change-btn">+</button>
+                </div>
+            </div>
+            <div class="time-container set-game">
+                <h2>SET</h2>
+                <div class="half-display flex">
+                    <p class="score-value total-sets-played" id="half-number">1</p>
+                </div>
+                <div class="timer-container">
+                    <p class="timer-element inactive" id="timer-display"><span id="timer-min">00</span>:<span id="timer-sec">00</span></p>
+                    <div class="time-controller flex" id="id-time-controller">
+                        <button id="time-reset-btn">0</button>
+                        <button id="time-plus-1m-btn">+1</button>
+                        <button id="time-1m-btn">1</button>
+                        <button id="time-2m-btn">2</button>
+                        <button id="time-5m-btn">5</button>
+                    </div>
+                </div>
+            </div>
+            <div class="set-container">
+                <p class="sets-won-hdg text-bordered">SETS WON</p>
+            <div class="score-display sets-won flex">
+                <button id="team2-set-dec" class="score-change-btn">&#8210;
+                </button>
+                <p class="score-value" id="t2-sets">0</p>
+                <button id="team2-set-inc" class="score-change-btn">+</button>
+            </div>
+            </div>
+    </div>
+    <div class="prev-sets-outer-container flex">
+        <div class="prev-set-container template flex">
+            <button class="del-prev-set-btn">X</button>
+            <p class="prev-set-score loser-score" id="t1-prev-score">22</p>
+            <p>&#8210;</p>
+            <p class="prev-set-score loser-score" id="t2-prev-score">22</p>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <p class="footer-copyrights">© 2022 The Sports Company</p>
+    </footer>
+
+</body>
+<script src="scripts/badmintonScoring.js"></script>
+<script src="scripts/timerDisplay.js"></script>
+
+</html>

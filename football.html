@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Match</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/scoring.css">
+</head>
+<body class="football-bg">
+    <header class="flex">
+        <img class="company-logo" src="images/company-logo.png" alt="Company Logo">
+        <h1><input class="main-hdg text-bordered" value="Football Tournament (edit)"></input></h1>
+    </header>
+    <main>
+        <section class="score-container flex">
+            <div class="team-score-container">
+                <input class="team-name text-bordered" value="TEAM 1 (edit)" maxlength="20"></input>
+                <div class="score-display flex">
+                    <button id="team1-dec" class="score-change-btn">&#8210;
+                    </button>
+                    <p class="score-value" id="t1-score">0</p>
+                    <button id="team1-inc" class="score-change-btn">+</button>
+                </div>
+            </div>
+            <div class="dash-container">
+                <h2 class="text-bordered">vs</h2>
+                <p class="score-dash text-bordered">&#8211;</p>
+            </div>
+            <div class="team-score-container">
+                <input class="team-name text-bordered"  value="TEAM 2 (edit)" maxlength="20"></input>
+                <div class="score-display flex">
+                    <button id="team2-dec" class="score-change-btn">&#8210;
+                    </button>
+                    <p class="score-value" id="t2-score">0</p>
+                    <button id="team2-inc" class="score-change-btn">+</button>
+                </div>
+            </div>
+        </section>
+        <div class="time-and-player-container flex">
+            <div class="team-players-container">
+                <div id="team-1-container">
+                    <p class="playing-label">Playing - <span id="team1-playing"></span></p>
+                    <div class="playing-container">
+                        <div class="player-item is-playing template">
+                            <input class="player-name" maxlength="18"></input>
+                            <div class="icon-container flex">
+                                <img src="images/fb-sub-in.png" alt="Substitute In" class="sub-icon" id="sub-in-btn">
+                                <img src="images/fb-sub-out.png" alt="Substitute Out" class="sub-icon" id="sub-out-btn">
+                                <img src="images/icon-cross.svg" alt="Delete Button" class="delete-btn" id="del-btn">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="playing-label">Bench - <span id="team1-benched"></span></p>
+                    <div class="bench-container">
+
+                    </div>
+                </div>
+            <input type="text" name="team-one-player-input" id="team-1-player-input" class="new-player-input" placeholder="Enter Name">
+        </div>
+            <div class="time-container">
+                <h2>HALF</h2>
+                <div class="half-display flex">
+                    <button id="half-dec" class="score-change-btn">&#8210;
+                    </button>
+                    <p class="score-value" id="half-number">1</p>
+                    <button id="half-inc" class="score-change-btn">+</button>
+                </div>
+                <div class="timer-container">
+                    <p class="timer-element inactive" id="timer-display"><span id="timer-min">00</span>:<span id="timer-sec">00</span></p>
+                    <div class="time-controller flex" id="id-time-controller">
+                        <button id="time-reset-btn">0</button>
+                        <button id="time-plus-1m-btn">+1</button>
+                        <button id="time-1m-btn">1</button>
+                        <button id="time-2m-btn">2</button>
+                        <button id="time-5m-btn">5</button>
+                    </div>
+                </div>
+            </div>
+            <div class="team-players-container">
+                <div id="team-2-container">
+                    <p class="playing-label">Playing - <span id="team2-playing"></span></p>
+                    <div class="playing-container">
+                        <div class="player-item is-playing template">
+                            <input class="player-name" maxlength="18"></input>
+                            <div class="icon-container flex">
+                                <img src="images/fb-sub-in.png" alt="Substitute In" class="sub-icon" id="sub-in-btn">
+                                <img src="images/fb-sub-out.png" alt="Substitute Out" class="sub-icon" id="sub-out-btn">
+                                <img src="images/icon-cross.svg" alt="Delete Button" class="delete-btn">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="playing-label">Bench - <span id="team2-benched"></span></p>
+                    <div class="bench-container">
+
+                    </div>
+                </div>
+                <input type="text" name="team-two-player-input" class="new-player-input" id="team-2-player-input" placeholder="Enter Name">
+            </div>
+    </div>
+    <div class="fixtures-outer-container">
+        <h2 class="text-bordered">Match Fixtures</h2>
+        <div class="fixture-element template flex">
+            <button class="del-fixture-btn">X</button>
+            <div class="fixture-elm-date-container flex">
+                <input class="fixture-elm-date" value="1" maxlength="2" id="fixture-elm-date-id"></input>
+                <select class="fixture-elm-month" id="fixture-elm-month-id">
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">Mar</option>
+                    <option value="4">Apr</option>
+                    <option value="5">May</option>
+                    <option value="6">Jun</option>
+                    <option value="7">Jul</option>
+                    <option value="8">Aug</option>
+                    <option value="9">Sep</option>
+                    <option value="10">Oct</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dec</option>
+                </select>
+            </div>
+            <div class="fixture-elm-team-container flex">
+                <input type="text" class="fixture-elm-team-name" id="fixture-elm-team1-name" placeholder="Team Name"></input>
+                <input type="text" class="fixture-elm-team-score" id="fixture-elm-team1-score"  value="0"></input>
+            </div>
+            <p class="fixture-elm-vs text-bordered">vs</p>
+            <div class="fixture-elm-team-container  flex">
+                <input type="text" class="fixture-elm-team-score" id="fixture-elm-team2-name"  value="0"></input>
+                <input type="text" class="fixture-elm-team-name"  id="fixture-elm-team2-score" placeholder="Team Name"></input>
+            </div>
+        </div>
+        <button class="add-fixture-btn" id="add-fixture-btn-id">+</button>
+    </div>
+    </main>
+
+    <footer>
+        <p class="footer-copyrights">© 2022 The Sports Company</p>
+    </footer>
+    
+</body>
+<script src="scripts/footballScoring.js"></script>
+<script src="scripts/timerDisplay.js"></script>
+
+</html>
